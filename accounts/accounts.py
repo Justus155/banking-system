@@ -1,5 +1,5 @@
-class account:
-    def __init__(self):
+class account():
+    def __init__(self,accountname,accountnum,balance):
         self.accountname = "empty"
         self.accountnum = 0
         self.balance = 0

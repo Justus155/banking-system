@@ -1,6 +1,7 @@
 
+from operator import index
 from index import User
-
+from banking_system.index import Index
 
 def main(index):
 
@@ -26,4 +27,4 @@ def main(index):
             break
 
 if __name__ == "__main__":
-    main()
+    main(index)

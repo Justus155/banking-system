@@ -16,3 +16,8 @@ class User:
             self.balance -= amount
             print(f"Withdrawal successful! New balance: ${self.balance:.2f}")
 
+def display_clients(clients):
+    print("\nClient List:")
+    for client in clients:
+        print(f"Name: {client.first_name} {client.last_name}, Equity Card Number: {client.equity_card_number}")
+

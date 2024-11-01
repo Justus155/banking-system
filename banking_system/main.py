@@ -16,8 +16,7 @@ def main():
             first_name = input("Enter your first name: ")
             last_name = input("Enter your last name: ")
             equity_card_number = input("Enter your equity card number: ")
-            continue
-            add_client(conn, user)
+            add_client(conn, User(first_name, last_name, equity_card_number))
             print("Client added successfully!")
 
         elif action == 'up':

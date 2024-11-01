@@ -4,13 +4,7 @@
 
 # @email: [justus.kamande@strathmore.edu]
 
-# @overview: [The User class represents a user with an equity card, 
-
-#allowing them to deposit and withdraw funds. This class includes methods for initializing user details, 
-
-#depositing money, 
-
-#and withdrawing money while maintaining the user’s balance.]
+### @overview: [The User class represents a user with an equity card, allowing them to deposit and withdraw funds. This class includes methods for initializing user details, depositing money, and withdrawing money while maintaining the user’s balance.]
 
 
 #def __init__(self, first_name, last_name, equity_card_number):

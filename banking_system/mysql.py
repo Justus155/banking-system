@@ -7,7 +7,7 @@ mydb = mysql.connector.connect(
 
   user="yourusername",
 
-  password="yourpassword"
+  password=""
 )
 
 print(mydb)

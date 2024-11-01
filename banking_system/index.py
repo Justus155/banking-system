@@ -5,6 +5,7 @@ class User(ABC):
         self.first_name = first_name
         self.last_name = last_name
         self.equity_card_number = equity_card_number
+        self.account_type = None
         self.__balance = 0.0  # Private attribute
 
     @abstractmethod

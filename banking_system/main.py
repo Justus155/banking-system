@@ -20,7 +20,7 @@ def add_client(conn, user):
     with conn:
         conn.execute('''
             INSERT INTO clients (first_name, last_name, equity_card_number, account_type)
-            VALUES (?, ?, ?, ?)
+            VALUES (?, ?, ?,?)
         ''', (user.first_name, user.last_name, user.equity_card_number, user.account_type))
 
 def update_client(conn, equity_card_number, first_name, last_name):
@@ -65,9 +65,9 @@ def main():
             equity_card_number = input("Enter your equity card number: ")
             account_type = input("Enter account type (savings/current): ").lower()
             if account_type == 'savings':
-                user = SavingsUser(first_name, last_name, equity_card_number)
+                user = SavingsUser(first_name, last_name, equity_card_number,account_type)
             elif account_type == 'current':
-                user = CurrentUser(first_name, last_name, equity_card_number)
+                user = CurrentUser(first_name, last_name, equity_card_number,account_type)
             else:
                 print("Invalid account type. Please enter 'savings' or 'current'.")
                 continue

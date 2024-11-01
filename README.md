@@ -1,8 +1,8 @@
 # @USER CLASS DOCUMENTATION:
 
-# @author: [justus kuria]
+# @authors: [justus kuria-155578,Bernard Maina-168944]
 
-# @email: [justus.kamande@strathmore.edu]
+# @email: [justus.kamande@strathmore.edu,bernard.maina@strathmore.edu]
 
 ### @overview: [The User class represents a user with an equity card, allowing them to deposit and withdraw funds. This class includes methods for initializing user details, depositing money, and withdrawing money while maintaining the user’s balance.]
 

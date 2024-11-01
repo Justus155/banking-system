@@ -52,4 +52,76 @@ else:
      ' withdrawal succesful'
 """
 
-#main class
+# MAIN CLASS FUNCTIONS --------------------------------
+
+## Features
+
+- Add new clients with savings or current accounts.
+"""
+  if action == 'a':
+            first_name = input("Enter your first name: ")
+            last_name = input("Enter your last name: ")
+            equity_card_number = input("Enter your equity card number: ")
+            add_client(conn, User(first_name, last_name, equity_card_number))
+            print("Client added successfully!")
+"""
+- Update client information.
+""" 
+elif action == 'up':
+            equity_card_number = input("Enter the equity card number of the client to update: ")
+            client = get_client(conn, equity_card_number)
+            if client:
+                first_name = input("Enter new first name: ")
+                last_name = input("Enter new last name: ")
+                update_client(conn, equity_card_number, first_name, last_name)
+                print("Client updated successfully!")
+            else:
+                print("Client not found!")
+"""
+- Delete clients.
+
+- Perform transactions (deposits and withdrawals) for clients.
+- Store client information in an SQLite database.
+
+# table
+- table creation function
+"""
+def create_table(conn):
+c = conn.cursor()
+c.execute('''
+CREATE TABLE IF NOT EXISTS clients
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+equity_card_number TEXT NOT NULL,
+balance REAL NOT NULL DEFAULT 0.0)
+''')
+"""
+- table update function
+"""
+def update_table(conn):
+c = conn.cursor()
+c.execute('''
+CREATE TABLE IF NOT EXISTS clients
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+equity_card_number TEXT NOT NULL,
+balance REAL NOT NULL DEFAULT 0.0)
+''')
+"""
+- table delete function
+"""
+def delete_table(conn):
+c = conn.cursor()
+c.execute('''
+DROP TABLE clients
+''')
+"""
+
+## Usage
+
+1. Run the `main.py` script to start the application.
+   right click main.py
+   select run  python file with terminal
+

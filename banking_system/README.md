@@ -1,4 +1,4 @@
-#USER CLASS DOCUMENTATION:
+# @USER CLASS DOCUMENTATION:
 
 # @author: [justus kuria]
 
@@ -52,4 +52,50 @@ else:
      ' withdrawal succesful'
 """
 
-#main class
+# MAIN CLASS FUNCTIONS --------------------------------
+
+## Features
+
+- Add new clients with savings or current accounts.
+"""
+  if action == 'a':
+            first_name = input("Enter your first name: ")
+            last_name = input("Enter your last name: ")
+            equity_card_number = input("Enter your equity card number: ")
+            add_client(conn, User(first_name, last_name, equity_card_number))
+            print("Client added successfully!")
+"""
+- Update client information.
+""" 
+elif action == 'up':
+            equity_card_number = input("Enter the equity card number of the client to update: ")
+            client = get_client(conn, equity_card_number)
+            if client:
+                first_name = input("Enter new first name: ")
+                last_name = input("Enter new last name: ")
+                update_client(conn, equity_card_number, first_name, last_name)
+                print("Client updated successfully!")
+            else:
+                print("Client not found!")
+"""
+- Delete clients.
+
+- Perform transactions (deposits and withdrawals) for clients.
+- Store client information in an SQLite database.
+
+## Requirements
+
+- Python 3.x
+- SQLite3 (included with Python's standard library)
+
+## Installation
+
+1. Clone the repository or download the code.
+2. Ensure you have Python 3.x installed on your machine.
+
+## Usage
+
+1. Run the `main.py` script to start the application.
+   right click main.py
+   select run  python file with terminal
+

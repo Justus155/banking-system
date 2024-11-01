@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class User(ABC):
-    def __init__(self, first_name, last_name, equity_card_number):
+    def __init__(self, first_name, last_name, equity_card_number,account_type):
         self.first_name = first_name
         self.last_name = last_name
         self.equity_card_number = equity_card_number

@@ -83,15 +83,41 @@ elif action == 'up':
 - Perform transactions (deposits and withdrawals) for clients.
 - Store client information in an SQLite database.
 
-## Requirements
-
-- Python 3.x
-- SQLite3 (included with Python's standard library)
-
-## Installation
-
-1. Clone the repository or download the code.
-2. Ensure you have Python 3.x installed on your machine.
+# table
+- table creation function
+"""
+def create_table(conn):
+c = conn.cursor()
+c.execute('''
+CREATE TABLE IF NOT EXISTS clients
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+equity_card_number TEXT NOT NULL,
+balance REAL NOT NULL DEFAULT 0.0)
+''')
+"""
+- table update function
+"""
+def update_table(conn):
+c = conn.cursor()
+c.execute('''
+CREATE TABLE IF NOT EXISTS clients
+(id INTEGER PRIMARY KEY AUTOINCREMENT,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+equity_card_number TEXT NOT NULL,
+balance REAL NOT NULL DEFAULT 0.0)
+''')
+"""
+- table delete function
+"""
+def delete_table(conn):
+c = conn.cursor()
+c.execute('''
+DROP TABLE clients
+''')
+"""
 
 ## Usage
 

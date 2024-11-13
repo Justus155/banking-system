@@ -6,7 +6,7 @@ from index import display_clients
 from mydatabase import create_tables, create_tables, add_client, update_client, delete_client, get_client
 
 #implementation of withdraw
-def withdraw(withdraw, amount):
+def withdraw(withdraw, amount,self):
     if amount > 0:
         if self.__balance - amount >= 0:
             self.__balance -= amount
@@ -17,7 +17,7 @@ def withdraw(withdraw, amount):
         print("Invalid amount. Please enter a number greater than 0.")
         return "withdrawn"
     #implemetation of deposit
-def deposit(deposit, amount):
+def deposit(deposit, amount,self):
     if amount > 0:
         self.__balance += amount
         print(f"${amount:.2f} deposited successfully!")

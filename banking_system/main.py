@@ -5,7 +5,27 @@ from savingsUser import SavingsUser
 from index import display_clients
 from mydatabase import create_tables, create_tables, add_client, update_client, delete_client, get_client
 
+#implementation of withdraw
+def withdraw(withdraw, amount):
+    if amount > 0:
+        if self.__balance - amount >= 0:
+            self.__balance -= amount
+            print(f"${amount:.2f} withdrawn successfully!")
+        else:
+            print("Insufficient funds!")
+    else:
+        print("Invalid amount. Please enter a number greater than 0.")
+        return "withdrawn"
+    #implemetation of deposit
+def deposit(deposit, amount):
+    if amount > 0:
+        self.__balance += amount
+        print(f"${amount:.2f} deposited successfully!")
+    else:
+        print("Invalid amount. Please enter a number greater than 0.")
+        return "deposited"
 def main():
+
     conn = sqlite3.connect('banking.db')
     create_tables(conn)
 
